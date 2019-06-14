@@ -1,0 +1,12 @@
+.center {
+    display: block;
+    margin-left: 40px;
+    
+    width: 100%;
+  }
+
+.display{
+    color: #0086ac;
+    text-align: center;
+    border-bottom: 10px solid #0086ac;
+}

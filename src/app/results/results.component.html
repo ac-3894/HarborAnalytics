@@ -1,0 +1,348 @@
+<br />
+<div class="display">
+    <h3>HARBOR ANALYTICS PREDICTION</h3>
+</div>
+
+<div style="float:left; width:70%; border: 1px solid #0086ac;height: 320px;" *ngIf="object">
+    <br /><br /><br /><br />
+    <div *ngIf="isPreferred">
+
+        <table style="width:100%;text-align:center;">
+            <tr>
+                <td class="data" style="width:15%;font-size : 20px;font-weight: bolder">Result : </td>
+                <td class="data_1" style="width:30%;font-size : 20px;font-weight: bolder;color: green;">PREFERRED</td>
+            </tr>
+            <br />
+            <tr>
+                <td class="data" style="width:15%;font-size : 20px;font-weight: bolder">Confidence : </td>
+                <td class="data_1" style="width:30%;font-size : 20px;font-weight: bolder;color: green;">{{object.Confidence}} %</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="!isPreferred">
+        <table style="width:100%;text-align:center;">
+            <tr>
+                <td class="data" style="width:15%;font-size : 20px;font-weight: bolder;">Result : </td>
+                <td class="data_1" style="width:30%;font-size : 20px;font-weight: bolder;color: red;">NON-PREFERRED</td>
+            </tr>
+            <br />
+            <tr>
+                <td class="data" style="width:15%;font-size : 20px;font-weight: bolder;">Confidence : </td>
+                <td class="data_1" style="width:30%;font-size : 20px;font-weight: bolder;color: red;">{{object.Confidence}} %</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div style="float:left; width:30% ; border: 1px solid #0086ac;height: 320px; align-content: center;" *ngIf="object">
+    <br /><br />
+    <button class="button" style="margin:5px;margin-left: 100px;" (click)="guideAlert(this)">Recommended
+        Guidance</button><br />
+    <button class="button" style="margin:5px;margin-left: 130px;" (click)="toggleTrends(this)">Customer
+        Trends</button><br />
+    <button class="button" style="margin:5px;margin-left: 140px;">Model Analyzer</button>
+</div>
+<div style="float:left; width:100%;height: 250px; border: 1px solid #0086ac;height: 260px;" *ngIf="object">
+
+    <div *ngIf="cust1" class="tabcontent">
+        <p class="summary">&nbsp;Insured Summary</p>
+        <div id="inner-1" style="float:left; width:33%; ">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Insured Name </td>
+                    <td class="data_1" style="width:30%;">Arthur Lee</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Age </td>
+                    <td class="data_1" style="width:30%;">25</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Sex </td>
+                    <td class="data_1" style="width:30%;">Male</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ChestPain </td>
+                    <td class="data_1" style="width:30%;">Typical</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestBP</td>
+                    <td class="data_1" style="width:30%;">120</td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="inner-2" style="float:left; width:33%;">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Diabetes</td>
+                    <td class="data_1" style="width:30%;">Yes</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Slope </td>
+                    <td class="data_1" style="width:30%;">2</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Cholestrol</td>
+                    <td class="data_1" style="width:30%;">90</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestECG</td>
+                    <td class="data_1" style="width:30%;">normal</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Thal</td>
+                    <td class="data_1" style="width:30%;">Fixed</td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div id="inner-21" style="float:left; width:33%;">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">MaxHR</td>
+                    <td class="data_1" style="width:30%;">90</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ExAng</td>
+                    <td class="data_1" style="width:30%;">Yes</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Oldpeak</td>
+                    <td class="data_1" style="width:30%;">3.4</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Ca</td>
+                    <td class="data_1" style="width:30%;">2 vessels coloured by Fluoroscopy</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div *ngIf="cust2" class="tabcontent">
+        <p class="summary">&nbsp;Insured Summary</p>
+        <div id="inner-3" style="float:left; width:33%; ">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Insured Name </td>
+                    <td class="data_1" style="width:30%;">Stacey D'souza</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Age </td>
+                    <td class="data_1" style="width:30%;">45</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Sex </td>
+                    <td class="data_1" style="width:30%;">Female</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ChestPain </td>
+                    <td class="data_1" style="width:30%;">Nonanginal</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestBP</td>
+                    <td class="data_1" style="width:30%;">140</td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="inner-31" style="float:left; width:33%;">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Diabetes</td>
+                    <td class="data_1" style="width:30%;">No</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Slope </td>
+                    <td class="data_1" style="width:30%;">3</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Cholestrol</td>
+                    <td class="data_1" style="width:30%;">112</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestECG</td>
+                    <td class="data_1" style="width:30%;">Having severe abnormality</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Thal</td>
+                    <td class="data_1" style="width:30%;">Fixed</td>
+                </tr>
+            </table>
+        </div>
+        <div id="inner-4" style="float:left; width:33%;">
+            <table style="width:100%">
+
+                <tr>
+                    <td class="data" style="width:15%;">MaxHR</td>
+                    <td class="data_1" style="width:30%;">112</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ExAng</td>
+                    <td class="data_1" style="width:30%;">Yes</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Oldpeak</td>
+                    <td class="data_1" style="width:30%;">3.4</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Ca</td>
+                    <td class="data_1" style="width:30%;">2 vessels coloured by Fluoroscopy</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div *ngIf="cust3" class="tabcontent">
+        <p class="summary">&nbsp;Insured Summary</p>
+        <div id="inner-5" style="float:left; width:33%; ">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Insured Name </td>
+                    <td class="data_1" style="width:30%;">Shaurya Rajput</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Age </td>
+                    <td class="data_1" style="width:30%;">25</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Sex </td>
+                    <td class="data_1" style="width:30%;">Male</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ChestPain </td>
+                    <td class="data_1" style="width:30%;">Asymptomatic</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestBP</td>
+                    <td class="data_1" style="width:30%;">120</td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="inner-5" style="float:left; width:33%; ">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Diabetes</td>
+                    <td class="data_1" style="width:30%;">No</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Slope </td>
+                    <td class="data_1" style="width:30%;">2</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Cholestrol</td>
+                    <td class="data_1" style="width:30%;">110</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestECG</td>
+                    <td class="data_1" style="width:30%;">Normal</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Thal</td>
+                    <td class="data_1" style="width:30%;">Normal</td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div id="inner-6" style="float:left; width:33%;">
+            <table style="width:100%">
+
+                <tr>
+                    <td class="data" style="width:15%;">MaxHR</td>
+                    <td class="data_1" style="width:30%;">110</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ExAng</td>
+                    <td class="data_1" style="width:30%;">No</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Oldpeak</td>
+                    <td class="data_1" style="width:30%;">2</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Ca</td>
+                    <td class="data_1" style="width:30%;">No vessels coloured by Fluoroscopy</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div *ngIf="cust4" class="tabcontent">
+        <p class="summary">&nbsp;Insured Summary</p>
+        <div id="inner-7" style="float:left; width:33%; ">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Insured Name </td>
+                    <td class="data_1" style="width:30%;">Rachel Green</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Age </td>
+                    <td class="data_1" style="width:30%;">37</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Sex </td>
+                    <td class="data_1" style="width:30%;">Female</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ChestPain </td>
+                    <td class="data_1" style="width:30%;">Asymptomatic</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestBP</td>
+                    <td class="data_1" style="width:30%;">120</td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="inner-71" style="float:left; width:33%; ">
+            <table style="width:100%">
+                <tr>
+                    <td class="data" style="width:15%;">Diabetes</td>
+                    <td class="data_1" style="width:30%;">No</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Slope </td>
+                    <td class="data_1" style="width:30%;">2</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Cholestrol</td>
+                    <td class="data_1" style="width:30%;">100</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">RestECG</td>
+                    <td class="data_1" style="width:30%;">Normal</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Thal</td>
+                    <td class="data_1" style="width:30%;">Normal</td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="inner-8" style="float:left; width:33%;">
+            <table style="width:100%">
+
+                <tr>
+                    <td class="data" style="width:15%;">MaxHR</td>
+                    <td class="data_1" style="width:30%;">100</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">ExAng</td>
+                    <td class="data_1" style="width:30%;">No</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Oldpeak</td>
+                    <td class="data_1" style="width:30%;">2</td>
+                </tr>
+                <tr>
+                    <td class="data" style="width:15%;">Ca</td>
+                    <td class="data_1" style="width:30%;">No vessels coloured by Fluoroscopy</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,49 @@
+.display{
+    color: #0086ac;
+    text-align: center;
+    border-bottom: 10px solid #0086ac;
+}
+
+.data {
+    border: none;
+    color: #333a3f;
+    font-size: 15px;
+    font: normal 15px/17px "Open Sans", Helvetica, sans-serif;
+    font-weight: bold;
+    
+  }
+  
+  .data_1 {
+    border: none;
+    color: #333a3f;
+    font-size: 15px;
+    font: normal 15px/17px "Open Sans", Helvetica, sans-serif;
+    
+  }
+  .button {
+    background-color: #0086ac; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .summary{
+  background-color: #C5DFF8;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
+  color: #0c3742;
+  padding: 0px;
+  font-size: 20px;
+  border: 1px solid #0086ac;
+  font-weight: bold;
+  width: 100%;
+}
+  
