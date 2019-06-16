@@ -112,3 +112,18 @@
   
 }
 
+.disabled {
+  background-color: #0086ac; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  opacity: 0.6;
+  cursor: not-allowed;
+}

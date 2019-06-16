@@ -25,6 +25,7 @@ export class ResultsComponent implements OnInit {
   private cust2;
   private cust3;
   private cust4;
+  private width;
   constructor(private http : HttpClient,private user :UserService,private router:Router) { 
     console.log("Getting the JSON data");
   }
@@ -59,6 +60,7 @@ export class ResultsComponent implements OnInit {
         this.abc = data as any;
         this.def = data as any;	 // FILL THE ARRAY WITH DATA.
         this.confidence = this.abc.Confidence;
+        this.width = this.abc.Confidence;
         this.prediction =this.def.Prediction;
           console.log(this.object);
           console.log(this.confidence);
@@ -85,5 +87,8 @@ export class ResultsComponent implements OnInit {
     if(this.isPreferred == false){
       alert("The quote should be rejected!!");
     }
+  }
+  goback(eventName : any){
+    this.router.navigate(['select']);
   }
 }

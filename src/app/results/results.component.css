@@ -46,4 +46,53 @@
   font-weight: bold;
   width: 100%;
 }
-  
+.first{
+  height: 10px;
+  width : 50%;
+  background: #ddd;
+  margin-left: auto;
+  margin-right: auto;
+  }
+   
+ .second{
+ height: 10px;
+  background: #009200;
+ }
+
+ .third{
+  height: 10px;
+   background: red;
+  }
+
+  .disabled {
+    background-color: #0086ac; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .back{
+    background-color: #0086ac; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  white-space: normal;
+  overflow-wrap: break-word;
+  }

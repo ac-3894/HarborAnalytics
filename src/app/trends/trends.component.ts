@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trends',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class TrendsComponent implements OnInit {
 
   trendImage:any = "assets/images/feature.jpg";
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+  goback(eventName : any){
+    this.router.navigate(['select']);
+  }
 
+  
 }
